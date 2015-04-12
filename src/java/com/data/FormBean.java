@@ -1,6 +1,5 @@
 package com.data;
 
-
 import java.io.Serializable;
 
 /*
@@ -8,13 +7,12 @@ import java.io.Serializable;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author MK
  */
-public class FormBean implements Serializable{
-    
+public class FormBean implements Serializable {
+
     private String fName;
     private String lName;
     private String userID;
@@ -28,42 +26,38 @@ public class FormBean implements Serializable{
     private String securityAns;
     private String NC_CHECK_EMAIL;
     private String NC_CHECK_OTHER;
-    
-    
 
-    
     /*
-    Constructor
-    */
-    
+     Constructor
+     */
     public FormBean() {
-        
-    }
-    
-    /*
-    Checks to see if the email was valid, aka if it was empty
-    */
-    public boolean isValid(){
-        
-        //check to see if the string is "", if so return false
-        if(this.getuserID().equals(""))
-            return false;
-        
-            //return true
-            return true;
-        
-        
+
     }
 
-    public void setfName(String firstName) {
+    /*
+     Checks to see if the email was valid, aka if it was empty
+     */
+    public boolean isValid() {
+
+        //check to see if the string is "", if so return false
+        if (this.getUserID().equals("")) {
+            return false;
+        }
+
+        //return true
+        return true;
+
+    }
+
+    public void setFName(String firstName) {
         this.fName = firstName;
     }
 
-    public void setlName(String lastName) {
+    public void setLName(String lastName) {
         this.lName = lastName;
     }
 
-    public void setuserID(String emailAddress) {
+    public void setUserID(String emailAddress) {
         this.userID = emailAddress;
     }
 
@@ -71,15 +65,15 @@ public class FormBean implements Serializable{
         this.password = password;
     }
 
-    public void setrePassword(String verifyPassword) {
+    public void setRePassword(String verifyPassword) {
         this.rePassword = verifyPassword;
     }
 
-    public void setalias(String displayName) {
+    public void setAlias(String displayName) {
         this.alias = displayName;
     }
 
-    public void setcountryOfRes(String country) {
+    public void setCountryOfRes(String country) {
         this.countryOfRes = country;
     }
 
@@ -91,11 +85,11 @@ public class FormBean implements Serializable{
         this.langauge = langauge;
     }
 
-    public void setsecurityQues(String securityQuestion) {
+    public void setSecurityQues(String securityQuestion) {
         this.securityQues = securityQuestion;
     }
 
-    public void setsecurityAns(String answerQuestion) {
+    public void setSecurityAns(String answerQuestion) {
         this.securityAns = answerQuestion;
     }
 
@@ -107,15 +101,15 @@ public class FormBean implements Serializable{
         this.NC_CHECK_OTHER = telephonePref;
     }
 
-    public String getFirstName() {
+    public String getFName() {
         return fName;
     }
 
-    public String getlName() {
+    public String getLName() {
         return lName;
     }
 
-    public String getuserID() {
+    public String getUserID() {
         return userID;
     }
 
@@ -123,15 +117,15 @@ public class FormBean implements Serializable{
         return password;
     }
 
-    public String getrePassword() {
+    public String getRePassword() {
         return rePassword;
     }
 
-    public String getalias() {
+    public String getAlias() {
         return alias;
     }
 
-    public String getcountryOfRes() {
+    public String getCountryOfRes() {
         return countryOfRes;
     }
 
@@ -143,11 +137,11 @@ public class FormBean implements Serializable{
         return langauge;
     }
 
-    public String getsecurityQues() {
+    public String getSecurityQues() {
         return securityQues;
     }
 
-    public String getsecurityAns() {
+    public String getSecurityAns() {
         return securityAns;
     }
 
@@ -158,10 +152,5 @@ public class FormBean implements Serializable{
     public String getNC_CHECK_OTHER() {
         return NC_CHECK_OTHER;
     }
-    
-   
-    
-    
-    
-    
+
 }

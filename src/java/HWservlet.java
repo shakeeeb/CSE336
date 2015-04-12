@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author 
+ * @author
  */
 @WebServlet(urlPatterns = {"/HWservlet"})
 public class HWservlet extends HttpServlet {
@@ -36,82 +36,74 @@ public class HWservlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         ServletContext sc = this.getServletContext();
         FormBean bean = (FormBean) sc.getAttribute("bean");
-        if(bean == null){
+        if (bean == null) {
             bean = new FormBean();
             sc.setAttribute("bean", bean);
         }
-        
-        
+
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
+
             Boolean isEmailValid = false;
-            
+
             //request dispatcher
-            
-            
             //populate the form bean
             //FormBean bean = new FormBean();
-            
             //first name store data
-            bean.setfName(request.getParameter("FName"));
+            bean.setFName(request.getParameter("FName"));
             //store last name data
-            bean.setlName(request.getParameter("LName"));
+            bean.setLName(request.getParameter("LName"));
             //store the userid aka the email
-            bean.setuserID(request.getParameter("UserID"));
+            bean.setUserID(request.getParameter("UserID"));
             //store the password
             bean.setPassword(request.getParameter("Password"));
             //store the verify password field
-            bean.setrePassword(request.getParameter("RePassword"));
+            bean.setRePassword(request.getParameter("RePassword"));
             // store the display name, the alias
-            bean.setalias(request.getParameter(("alias")));
+            bean.setAlias(request.getParameter(("alias")));
             // store the CountryOfRes
-            bean.setcountryOfRes(request.getParameter("CountryOfRes"));
+            bean.setCountryOfRes(request.getParameter("CountryOfRes"));
             // store the city
             bean.setCity(request.getParameter("City"));
             //store the langauge
             bean.setLangauge(request.getParameter("Language"));
             // store the security question, SecurityQues
-            bean.setsecurityQues(request.getParameter("SecurityQues"));
+            bean.setSecurityQues(request.getParameter("SecurityQues"));
             //store the answer to the security questioh, SecurityAns
-            bean.setsecurityAns(request.getParameter("SecurityAns"));
+            bean.setSecurityAns(request.getParameter("SecurityAns"));
             //store the check email box
             bean.setNC_CHECK_EMAIL(request.getParameter("NC_CHECK_EMAIL"));
             // store the check other box
             bean.setNC_CHECK_OTHER(request.getParameter("NC_CHECK_OTHER"));
-            
+
             //invoke the isValid method, and return the value
             isEmailValid = bean.isValid();
-            
+
             //check if bean is valid, if not, repopulate the page
-            if(!bean.isValid()){
+            if (!bean.isValid()) {
                 //forward the request dispatcher
-                String url = "/repop.jsp";
+                //String url = "/repop.jsp";
+                String url = "/projectTest.jsp";
+                RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+                dispatcher.forward(request, response);
+            } else {
+                //String url ="/Congrats.jsp";
+                String url = "/projectTest.jsp";
                 RequestDispatcher dispatcher = request.getRequestDispatcher(url);
                 dispatcher.forward(request, response);
             }
-            else
-            {
-                String url ="/Congrats.jsp";
-                RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-                dispatcher.forward(request, response);
-            }
-            
-            
-            
-            
-            
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet HWservlet</title>");            
+            out.println("<title>Servlet HWservlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet HWservlet at " + bean.getNC_CHECK_EMAIL() + "</h1>");
             out.println("<h1>Servlet HWservlet at " + bean.getNC_CHECK_OTHER() + "</h1>");
             out.println(isEmailValid);
             out.println("<body>");
-            
+
             out.println("</body>");
             out.println("</html>");
         }

@@ -382,7 +382,7 @@
   <body id="ibm-com">
   <div id="ibm-top" class="ibm-landing-page"> 
       
-    <jsp:useBean id="bean" class="com.data.FormBean" scope="application" />
+      <jsp:useBean id="bean" class="com.data.FormBean" scope="application" />
       
     
     <!-- MASTHEAD_BEGIN -->
