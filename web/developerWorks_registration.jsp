@@ -479,7 +479,7 @@ can use the IBM ID and password that you designate below across IBM.</p>
 <p>Asterisks (<span class="ibm-required">*</span>) indicate fields required to
 complete this transaction.</p>
 
-<form method="get" action="http://localhost:8080/CSE336/HWservlet"
+<form method="get" action="/CSE336/HWservlet"
 class="ibm-row-form" name="register" id="registerform">
   <h2 class="ibm-inner-subhead">Basic registration information</h2>
 

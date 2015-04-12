@@ -84,7 +84,7 @@ public class HWservlet extends HttpServlet {
             isEmailValid = bean.isValid();
             
             //check if bean is valid, if not, repopulate the page
-            if(! bean.isValid()){
+            if(!bean.isValid()){
                 //forward the request dispatcher
                 String url = "/repop.jsp";
                 RequestDispatcher dispatcher = request.getRequestDispatcher(url);
