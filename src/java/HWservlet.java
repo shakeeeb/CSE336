@@ -107,7 +107,8 @@ public class HWservlet extends HttpServlet {
             out.println("<title>Servlet HWservlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet HWservlet at " + bean.getLangauge() + "</h1>");
+            out.println("<h1>Servlet HWservlet at " + bean.getNC_CHECK_EMAIL() + "</h1>");
+            out.println("<h1>Servlet HWservlet at " + bean.getNC_CHECK_OTHER() + "</h1>");
             out.println(isEmailValid);
             out.println("<body>");
             

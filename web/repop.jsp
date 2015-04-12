@@ -585,12 +585,11 @@
                   <div id="privacyid">
                     <p>Please keep me informed of products, services and offerings from IBM companies worldwide.</p>
                     <p> <span class="ibm-input-group">
-                      <input id="NC_CHECK_EMAIL" value="0" name="NC_CHECK_EMAIL" type="checkbox">
+                            <input ${bean.NC_CHECK_EMAIL eq "0" ? 'checked' : ''} id="NC_CHECK_EMAIL" value="0" name="NC_CHECK_EMAIL" type="checkbox">
                       <label for="NC_CHECK_EMAIL">by email.</label>
                       </span><br>
-                      <input id="NC_HIDDEN_EMAIL" value="OPT_IN" name="NC_HIDDEN_EMAIL" type="hidden">
                       <span class="ibm-input-group">
-                      <input id="NC_CHECK_OTHER" value="4" name="NC_CHECK_OTHER" type="checkbox">
+                          <input ${bean.NC_CHECK_OTHER eq "4" ? 'checked' : ''} id="NC_CHECK_OTHER" value="4" name="NC_CHECK_OTHER" type="checkbox">
                       <label for="NC_CHECK_OTHER">by telephone or postal mail.</label>
                       </span><br>
                       <input id="NC_HIDDEN_OTHER" value="OPT_IN" name="NC_HIDDEN_OTHER" type="hidden">
