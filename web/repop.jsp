@@ -429,7 +429,7 @@
                       <p>
                         <label for="FName">First name:<span class="ibm-required">*</span></label>
                         <span>
-                            <input name="FName" id="FName" size="36" type="text" value="${bean.firstName}" onBlur="isFieldEmpty('f');">
+                            <input name="FName" id="FName" size="36" type="text" value="${bean.FName}" onBlur="isFieldEmpty('f');">
                         </span> 
                         
                         
@@ -442,7 +442,7 @@
                       <p>
                         <label for="LName">Last name:<span class="ibm-required">*</span></label>
                         <span>
-                            <input name="LName" id="LName" size="36" type="text" value="${bean.getlName()}" onBlur="isFieldEmpty('l');">
+                            <input name="LName" id="LName" size="36" type="text" value="${bean.LName}" onBlur="isFieldEmpty('l');">
                         </span> 
                         
                         <span class="dw-lc-formerror" id="emptyL_invalid" style="display:none;">You need to input a value.</span> <span class="dw-lc-formconfirm" id="emptyL_valid" style="display:none;">&nbsp;</span> 
@@ -456,7 +456,7 @@
                       
                       
                     <span>
-                        <input name="UserID" id="emailAddress" size="42" type="text" value="${bean.getuserID()}" onKeyUp="validateUserID();" onBlur= "validateUserID(); checkEmail(&#39;emailAddress&#39;);">
+                        <input name="UserID" id="emailAddress" size="42" type="text" value="${bean.getUserID()}" onKeyUp="validateUserID();" onBlur= "validateUserID(); checkEmail(&#39;emailAddress&#39;);">
                     </span> <span class="dw-lc-formerror" id="userid_invalid" style="display:none;">This is not a valid email address and your field must be not empty!</span> <span class="dw-lc-formconfirm" id="userid_valid" style="display:none;">&nbsp;</span> </p>
                   <p>
                     <label for="Password">Password:<span class="ibm-required">*</span><br>
@@ -467,7 +467,7 @@
                   <p>
                     <label for="RePassword">Verify password:<span class="ibm-required">*</span></label>
                     <span>
-                        <input name="RePassword" id="RePassword" size="42" type="password" value="${bean.getrePassword()}" onKeyUp="validateRePassword();" onBlur="validateRePassword();">
+                        <input name="RePassword" id="RePassword" size="42" type="password" value="${bean.getRePassword()}" onKeyUp="validateRePassword();" onBlur="validateRePassword();">
                     </span> <span class="dw-lc-formerror" id="repassword_mismatch" style="display:none;">The passwords did not match.</span> <span class="dw-lc-formerror" id="repassword_invalid" style="display:none;">The password you entered is not valid and your field must be not empty!.</span> <span class="dw-lc-formconfirm" id="repassword_valid" style="display:none;">&nbsp;</span> </p>
                   <p>
                     <label for="alias">Display name:<span class="ibm-required">*</span><br>
@@ -475,7 +475,7 @@
                       <!--https://www.ibm.com/developerworks/dwwi/jsp/Register.jsp?lang=en_US&appname=developerworks&d=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Ftopics%2#overlay2--> 
                       </span> </label>
                     <span>
-                        <input name="alias" id="alias" size="42" type="text" value="${bean.getalias()}" onKeyUp="validateDisplayName();" onBlur="validateDisplayName(); checkDisplayname(&#39;alias&#39;);">
+                        <input name="alias" id="alias" size="42" type="text" value="${bean.getAlias()}" onKeyUp="validateDisplayName();" onBlur="validateDisplayName(); checkDisplayname(&#39;alias&#39;);">
                     </span> <span class="dw-lc-formerror" id="alias_invalid" style="display:none;">This display name is not valid. Please choose another. Addtionally, your field must not be empty!</span> <span class="dw-lc-formconfirm" id="alias_valid" style="display:none;">&nbsp;</span> </p>
                   
                   <!-- SUPPLEMENTAL OVERLAYS START HERE -->
@@ -574,7 +574,7 @@
                   <p>
                     <label for="SecurityAns">Answer to security question:<span class="ibm-required">*</span></label>
                     <span>
-                        <input name="SecurityAns" id="SecurityAns" size="42" type="text" value="${bean.getsecurityAns()}" onBlur="isFieldEmpty('s');">
+                        <input name="SecurityAns" id="SecurityAns" size="42" type="text" value="${bean.getSecurityAns()}" onBlur="isFieldEmpty('s');">
                     </span> 
                     
                     <span class="dw-lc-formerror" id="emptyS_invalid" style="display:none;">You need to input a value.</span> <span class="dw-lc-formconfirm" id="emptyS_valid" style="display:none;">&nbsp;</span> 

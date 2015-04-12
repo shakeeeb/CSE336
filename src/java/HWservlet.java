@@ -82,13 +82,13 @@ public class HWservlet extends HttpServlet {
             //check if bean is valid, if not, repopulate the page
             if (!bean.isValid()) {
                 //forward the request dispatcher
-                //String url = "/repop.jsp";
-                String url = "/projectTest.jsp";
+                String url = "/repop.jsp";
+                //String url = "/projectTest.jsp";
                 RequestDispatcher dispatcher = request.getRequestDispatcher(url);
                 dispatcher.forward(request, response);
             } else {
-                //String url ="/Congrats.jsp";
-                String url = "/projectTest.jsp";
+                String url ="/Congrats.jsp";
+                //String url = "/projectTest.jsp";
                 RequestDispatcher dispatcher = request.getRequestDispatcher(url);
                 dispatcher.forward(request, response);
             }
