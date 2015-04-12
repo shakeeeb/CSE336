@@ -5,13 +5,18 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
   <!doctype html>
   
   <!-- saved from url=(0145)https://www.ibm.com/developerworks/dwwi/jsp/Register.jsp?lang=en_US&appname=developerworks&d=http%3A%2F%2Fwww.ibm.com%2Fdeveloperworks%2Ftopics%2 -->
+
+
   <html lang="en" class="dj_webkit dj_chrome dj_contentbox">
   <head>
+      
+      
   <meta charset="utf-8">
   
   <!-- SITE MON : START (DO NOT DELETE) -->
@@ -377,7 +382,6 @@
   <body id="ibm-com">
   <div id="ibm-top" class="ibm-landing-page"> 
       
-  
     <jsp:useBean id="bean" class="com.data.FormBean" scope="application" />
       
     
@@ -509,12 +513,12 @@
                       <span class="ibm-additional-info dw-lc-labeloverride dw-lc-important-adjust ibm-item-note">(Required for warranty)</span></label>
                     <span>
                     <select name="CountryOfRes" id="countryResidence">
-                      <option selected="" value="selected">Select one</option>
-                      <option value="AL">Albania</option>
-                      <option value="CN">China</option>
-                      <option value="FR">France</option>
-                      <option value="RU">Russian Federation</option>
-                      <option value="US">United States</option>
+                      <option ${bean.countryOfRes eq "" ? 'selected = "selected"' : ''} selected="" value="selected">Select one</option>
+                      <option ${bean.countryOfRes eq "AL" ? 'selected = "selected"' : ''} value="AL">Albania</option>
+                      <option ${bean.countryOfRes eq "CN" ? 'selected = "selected"' : ''} value="CN">China</option>
+                      <option ${bean.countryOfRes eq "FR" ? 'selected = "selected"' : ''} value="FR">France</option>
+                      <option ${bean.countryOfRes eq "RU" ? 'selected = "selected"' : ''} value="RU">Russian Federation</option>
+                      <option ${bean.countryOfRes eq "US" ? 'selected = "selected"' : ''} value="US">United States</option>
                     </select>
                     </span>
                     
@@ -532,12 +536,12 @@
                         <label for="Language">Language:<span class="ibm-required">*</span></label>
                         <span>
                         <select name="Language" id="Language">
-                          <option value="">Select one</option>
-                          <option value="en-AU">English, Australian</option>
-                          <option value="eo-FR">Esperanto</option>
-                          <option value="el-GR">Greek, Modern (1453-)</option>
-                          <option value="he-IL">Hebrew</option>
-                          <option value="zu-ZA">Zulu</option>
+                          <option ${bean.langauge eq "" ? 'selected = "selected"' : ''} value="">Select one</option>
+                          <option  ${bean.langauge eq "en-AU" ? 'selected = "selected"' : ''} value="en-AU">English, Australian</option>
+                          <option  ${bean.langauge eq "eo-FR" ? 'selected = "selected"' : ''} value="eo-FR">Esperanto</option>
+                          <option  ${bean.langauge eq "el-GR" ? 'selected = "selected"' : ''} value="el-GR">Greek, Modern (1453-)</option>
+                          <option  ${bean.langauge eq "he-IL" ? 'selected = "selected"' : ''} value="he-IL">Hebrew</option>
+                          <option  ${bean.langauge eq "zu-ZA" ? 'selected = "selected"' : ''} value="zu-ZA">Zulu</option>
                         </select>
                         </span> </p>
                     </div>
@@ -549,12 +553,12 @@
                         <label for="SecurityQues">Security question:<span class="ibm-required">*</span></label>
                         <span>
                         <select name="SecurityQues" id="SecurityQues" onChange="removetempfunction()">
-                          <option selected="selected" value="">Select one</option>
-                          <option value="name">What is your mother's maiden name?</option>
-                          <option value="pet">What is the name of your first pet?</option>
-                          <option value="school">What was the name of your first school?</option>
-                          <option value="job">In what city or town was your first job?</option>
-                          <option value="country">In what country were you born?</option>
+                          <option  ${bean.securityQues eq "" ? 'selected = "selected"' : ''} value="">Select one</option>
+                          <option  ${bean.securityQues eq "name" ? 'selected = "selected"' : ''} value="name">What is your mother's maiden name?</option>
+                          <option  ${bean.securityQues eq "pet" ? 'selected = "selected"' : ''} value="pet">What is the name of your first pet?</option>
+                          <option  ${bean.securityQues eq "school" ? 'selected = "selected"' : ''} value="school">What was the name of your first school?</option>
+                          <option  ${bean.securityQues eq "job" ? 'selected = "selected"' : ''} value="job">In what city or town was your first job?</option>
+                          <option  ${bean.securityQues eq "country" ? 'selected = "selected"' : ''} value="country">In what country were you born?</option>
                         </select>
                         </span> </p>
                     </div>

@@ -28,6 +28,8 @@ public class FormBean implements Serializable{
     private String securityAns;
     private String NC_CHECK_EMAIL;
     private String NC_CHECK_OTHER;
+    
+    
 
     
     /*
