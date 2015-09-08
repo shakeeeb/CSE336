@@ -264,6 +264,21 @@
             displayValid('alias');
             }
             }
+            
+            function validateCountry(){
+                var xmlHttp = new XMLHttpRequest();
+                var country = document.getElementById("country");
+                var countryMessage = document.getElement("countryMessage"); // where we write to
+                var url = "http://localhost:8080/cse336/CountryValidate?country=" + country.value;
+                xmlhttp.open("GET", url, true); // this creates a thingies
+                xmlhttp.onreadystatechange = new function(){
+                    // anonymous function
+                    if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                        document.getElementById("country").innerHTML = xmlhttp.responseText;
+                    }
+                }
+                
+            }
 
             //this is abstraction for valid and invalid inputs
 
@@ -339,10 +354,14 @@
 
 
         </script>
+        <script src="scrpt.js" ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         <script src="usen-utf8.js" id="dojoIoScript2" charset="utf-8"></script><script src="cookie-id.js"></script><script src="rules_50200000.js"></script><script src="dispatcher-v3.js"></script><script charset="utf-8" src="move.xd.js"></script><script charset="utf-8" src="TimedMoveable.xd.js"></script><script charset="utf-8" src="_CssStateMixin.xd.js"></script><script charset="utf-8" src="_FormMixin.xd.js"></script><script charset="utf-8" src="_DialogMixin.xd.js"></script><script charset="utf-8" src="DialogUnderlay.xd.js"></script><script charset="utf-8" src="ContentPane.xd.js"></script><script charset="utf-8" src="common.xd.js"></script><script charset="utf-8" src="TooltipDialog.xd.js"></script><script src="yahoo-min.js"></script><script src="cp-v3.js"></script><script charset="utf-8" src="Mover.xd.js"></script><script charset="utf-8" src="Moveable.xd.js"></script><script src="json-min.js" ></script><script charset="utf-8" src="_ContentPaneResizeMixin.xd.js"></script><script charset="utf-8" src="html.xd.js"></script><script charset="utf-8" src="loading.xd.js"></script><script charset="utf-8" src="common.xd(1).js"></script><script type="text/javascript" charset="utf-8" src="autoscroll.xd.js"></script><script charset="utf-8" src="_LayoutWidget.xd.js"></script>
     </head>
 
     <body id="ibm-com">
+        <div id="count"><h3> </h3></div>
         <div id="ibm-top" class="ibm-landing-page"> 
 
             <!-- MASTHEAD_BEGIN -->
